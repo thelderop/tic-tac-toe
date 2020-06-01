@@ -2,29 +2,52 @@ h1 {
   color: purple;
 }
 
-div {
-  height: 150px;
-  width: 150px;
+.main-container {
+  height:100vh;
 }
 
-.toprow {
-  display: inline-block;
-  border-bottom: 5px solid black;
+.game-board-container{
+  height: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
-.middlerow {
-  display: inline-block;
-  border-bottom: 5px solid black;
+
+#game-board {
+  width: 600px;
+  height: 600px;
+  
+  display:flex;  
+  flex-wrap:wrap;
 }
 
-.bottomrow {
-  display: inline-block;
+.box {
+  flex-basis:33%;
+  background: white;
+  border: 1px green dashed;
 }
 
-.leftcolumn {
-  border-right: 5px solid black;
+
+.box:hover {
+  background: red;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
-.middlecolumn {
-  border-right: 5px solid black;
+.box:hover::after {
+  font-size: 62px;
+  color: black;
+  position: absolute;
+}
+
+@media all and (max-width: 650px) {
+  #game-board{
+   width: 300px;
+   height: 300px;
+ }
+ .box {
+  flex-basis:32%;
+}
 }

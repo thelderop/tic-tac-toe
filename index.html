@@ -1,8 +1,10 @@
+<!--I had a hard time with flexbox, and I wanted to focus on JS this weekend, so my HTML and CSS is from a CodePen-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/app.js"></script>
@@ -10,15 +12,25 @@
 <body>
   <h1>Tic Tac Toe</h1>
 
-  <div id="upperleft" class="leftcolumn toprow"></div>
-  <div id ="uppermiddle" class="middlecolumn toprow"></div>
-  <div id="upperright" class="rightcolumn toprow"></div><br>
-  <div id="middleleft" class="leftcolumn middlerow"></div>
-  <div id="middlemiddle" class="middlecolumn middlerow"></div>
-  <div id="middleright" class="rightcolumn middlerow"></div><br>
-  <div id="lowerleft" class="leftcolumn bottomrow"></div>
-  <div id="lowermiddle" class="middlecolumn bottomrow"></div>
-  <div id="lowerright" class="rightcolumn bottomrow"></div>
+  <div class="main-container">
+    <div class="game-board-container">
+      <div id="game-board">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+        <div id="box6" class="box"></div>
+        <div id="box7" class="box"></div>
+        <div id="box8" class="box"></div>
+        <div id="box9" class="box"></div>
+      </div>
+    </div>
+  </div>
+
+  <button id="reset">Reset</button>
+
+  <h2></h2>
 
 </body>
 </html>
