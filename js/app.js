@@ -56,34 +56,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // -------------- Functions -------------
     // Fills the clicked box with an X, adds that id to the xArray
     function xFill(e) {
-        console.log("xFill works")
         e.target.classList.add("xteam");
         let x = e.target.id;
         x.innerText = "X";
-        xArray.push("e.target.id"); //e.target.id.value?
+        xArray.push(x);
+        console.log(xArray + " x array"); //e.target.id.value?
     }
 
     // Fills the clicked box with an O, adds that id to the oArray
     function oFill(e) {
-        console.log("oFill works")
         e.target.classList.add("oteam");
         let o = e.target.id;
         o.innerText = "O";
-        oArray.push("e.target.id");
+        oArray.push(o);
+        console.log(oArray + " o array");
     }
 
     //Changes X and O turn, based on where in the for loop
     // Places an X or an O in the clicked on div
     // Do I need to give this function an event parameter?
     function clickCounter(e) {
-        console.log("clickCounter works")
         for (let i = 0; i < boxArray.length; i++) {
-            if ((i = 0) || (i = 2) || (i = 4) || (i = 6) || (i = 8)) {
+            if ((i == 0) || (i == 2) || (i == 4) || (i == 6) || (i == 8)) { //boxArray[i]
                 xFill(e);
                 endGame();
                 // TO-DO: Iterate through for loop on click - how?
                 turnMessage.innerText = "X turn";
-            } else if ((i = 1) || (i = 3) || (i = 5) || (i = 7)) {
+            } else if ((i == 1) || (i == 3) || (i == 5) || (i == 7)) {
                 oFill(e);
                 endGame();
                 // TO-DO: Iterate through for loop on click
