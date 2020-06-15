@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fills the clicked box with an X, adds that id to the xArray
     function xFill(e) {
         e.target.classList.add("xteam");
-        let x = e.target.id;
+        let x = e.target;
         x.innerText = "X";
         xArray.push(x);
         console.log(xArray + " x array"); //e.target.id.value?
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fills the clicked box with an O, adds that id to the oArray
     function oFill(e) {
         e.target.classList.add("oteam");
-        let o = e.target.id;
+        let o = e.target;
         o.innerText = "O";
         oArray.push(o);
         console.log(oArray + " o array");
